@@ -401,3 +401,8 @@ nav ul li:hover > .submenu {
     display: block;
 }
 
+.center-table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
