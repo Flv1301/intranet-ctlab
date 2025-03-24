@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}LABLD{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <div>
+        <!-- Banner -->
+        <div>
+            <img src="{{ url_for('static', filename='labld-2.png') }}" alt="logo" class="banner">
+            <div id="brasoes" class="brasoes">
+                <a title="Página Inicial" href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='cropped-cropped-labld.png') }}" alt="Página Inicial" class="logo">
+                </a>
+                <a title="Sistemas GSI" href="http://192.168.154.1/" target="_blank">
+                    <img src="{{ url_for('static', filename='brasao.png') }}" alt="Sistemas GSI" class="logo2">
+                </a>
+            </div>
+        </div>
+        
+        <header>
+            <div class="header-content">
+                <!--<div id="brasoes">
+                    <a title="Página Inicial" href="{{ url_for('index') }}">
+                        <img src="{{ url_for('static', filename='cropped-cropped-labld.png') }}" alt="Página Inicial" class="logo">
+                    </a>
+                    <a title="Sistemas GSI" href="http://192.168.154.1/" target="_blank">
+                        <img src="{{ url_for('static', filename='brasao.png') }}" alt="Sistemas GSI" class="logo2">
+                    </a>
+                </div>-->
+                <div id="menus">
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <a href="{{ url_for('sobreolaboratorio') }}" class="dropdown-menu">Sobre o Laboratório</a>
+                            </li>
+                            
+                            <li class="dropdown">
+                                <a class="dropdown-menu" onclick="toggleSubmenu(event, 'submenu1')">Legislação <span class="small-arrow-down">▼</span></a>
+                                <ul class="submenu" id="submenu1">
+                                    <li><a href="{{ url_for('acordos') }}">Acordos e Convenções Internacionais</a></li>
+                                    <li><a href="{{ url_for('leis') }}">Leis, Decretos e Resoluções</a></li>
+                                    <li><a href="{{ url_for('atos') }}">Atos Normativos MPPA</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a class="dropdown-menu" onclick="toggleSubmenu(event, 'submenu2')">Documentos <span class="small-arrow-down">▼</span></a>
+                                <ul class="submenu" id="submenu2">
+                                    <li><a href="{{ url_for('manuais') }}">Modelos e Manuais</a></li>
+                                    <li><a href="{{ url_for('apoio') }}">Material de Apoio</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a class="dropdown-menu" onclick="toggleSubmenu(event, 'submenu2')">SIMBA <span class="small-arrow-down">▼</span></a>
+                                <ul class="submenu" id="submenu3">
+                                    <li><a href="{{ url_for('simba_legislacao') }}">Legislação</a></li>
+                                    <li><a href="{{ url_for('simba_manuais') }}">Manuais</a></li>
+                                    <li class="submenu-container">
+                                        <a class="dropdown-menu2">Acessos <span class="small-arrow-right">▶</span></a>
+                                        <ul class="submenu-simba">
+                                            <li><a href="https://simba.mppa.mp.br/php/Simba.php" target="_blank">SIMBA MPPA</a></li>
+                                            <li><a href="https://simba.mppa.mp.br:8443/gcast/index.jsp" target="_blank">GCAST MPPA</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li><a class="dropdown-toggle">RIF <span class="small-arrow-down">▼</span></a>
+                                <ul class="submenu" id="submenu3">
+                                    <li><a href="{{ url_for('rif_legislacao') }}">Legislação</a></li>
+                                    <li><a href="{{ url_for('rif_manuais') }}">Manuais</a></li>
+                                    <li><a href="https://seic.coaf.gov.br/" target="_blank">Acesso RIF</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" onclick="toggleSubmenu(event, 'submenu5')">Sistemas <span class="small-arrow-down">▼</span></a>
+                                <ul class="submenu" id="submenu5">
+                                    <li><a href="{{ url_for('linksuteis') }}">Links Úteis</a></li>
+                                    <li><a href="{{ url_for('restrito') }}">Acesso Restrito</a></li>
+                                    <li><a href="{{ url_for('fontes') }}">Fontes Abertas</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a href="{{ url_for('contatos') }}" class="dropdown-toggle">Contatos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        function toggleSubmenu(event, submenuId) {
+            event.preventDefault();
+            var submenu = document.getElementById(submenuId);
+            submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+     <footer class="site-footer">
+        <div class="site-info text-center">
+     &nbsp; &nbsp; &nbsp; Copyright © 2025 – Todos os Direitos Reservados – Coordenadoria de Tecnologia e Laboratório de Tecnologia Contra a Lavagem de Dinheiro - CTLABLD 
+        </div>
+        </footer>
+</body>
+</html>

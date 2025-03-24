@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+    <div class="container">
+        <h1 style="text-align: center;">Fontes Abertas</h1>
+        <br>
+        <table class="center-table" style="width: 100%; margin: 0 auto;">
+            <tr>
+                <td><a href="https://www.sistemaspoliciais.com.br/fontes-abertas#" target="_blank"><img src="{{ url_for('static', filename='icones/Pesquisas em Fontes Abertas.png') }}" width="180" height="150"></a></td>
+                <td><a href="http://gsiserver:5000/rede/" target="_blank"><img src="{{ url_for('static', filename='icones/RedeCNPJ.png') }}" width="180" height="150"></a></td>
+                <td><a href="https://www.in.gov.br/inicio" target="_blank"><img src="{{ url_for('static', filename='icones/Diario Oficial da Uniao.png') }}" width="180" height="150"></a></td>
+                <td><a href="https://www.ioepa.com.br/pesquisa" target="_blank"><img src="{{ url_for('static', filename='icones/Imprensa Oficial do Para.png') }}" width="180" height="150"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.tcm.pa.gov.br//nec/jurisdicionados/" target="_blank"><img src="{{ url_for('static', filename='icones/Contas Publicas.png') }}" width="180" height="150"></a></td>
+                <td><a href="https://apex.tcm.pa.gov.br/ords/f?p=30149:1" target="_blank"><img src="{{ url_for('static', filename='icones/Folha de Pagamento.png') }}" width="180" height="150"></a></td>
+                <td><a href="https://filia-consulta.tse.jus.br/#/principal/certidao-gerar" target="_blank"><img src="{{ url_for('static', filename='icones/TSE Filiacao.png') }}" width="180" height="150"></a></td>
+                <td><a href="https://www.tse.jus.br/#/atendimento-eleitor/consultar-situacao-titulo-eleitor" target="_blank"><img src="{{ url_for('static', filename='icones/Situacao Eleitoral.png') }}" width="180" height="150"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://portal.trf1.jus.br/portaltrf1/pagina-inicial.htm" target="_blank"><img src="{{ url_for('static', filename='icones/TRF1 Consulta.png') }}" width="180" height="150"></a></td>
+                <td><a href="https://consultas.tjpa.jus.br/consultaunificada/consulta/principal" target="_blank"><img src="{{ url_for('static', filename='icones/Consulta.png') }}" width="180" height="150"></a></td>
+                <td><a href="https://solucoes.receita.fazenda.gov.br/Servicos/cnpjreva/cnpjreva_solicitacao.asp" target="_blank"><img src="{{ url_for('static', filename='icones/CNPJ Consulta.png') }}" width="180" height="150"></a></td>
+                <td><a href="https://www.unimed.coop.br/site/web/unimedbelem/2-via-de-boleto" target="_blank"><img src="{{ url_for('static', filename='icones/Unimed Belem.png') }}" width="180" height="150"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://pa.equatorialenergia.com.br/" target="_blank"><img src="{{ url_for('static', filename='icones/Equatorial.png') }}" width="180" height="150"></a></td>
+            </tr>
+        </table>
+    </div>
+</section>
+{% endblock %}

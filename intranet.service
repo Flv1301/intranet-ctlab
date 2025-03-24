@@ -1,0 +1,12 @@
+[Unit]
+Description=uWSGI instance to serve Intranet
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/intranet
+ExecStart=/var/www/intranet/venv/bin/uwsgi --ini /var/www/intranet/uwsgi.ini
+
+[Install]
+WantedBy=multi-user.target

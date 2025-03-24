@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+    <div class="container">
+        <h1 style="text-align: center;">Acesso Restrito</h1>
+        <br>
+        <table class="center-table" style="width: 100%; margin: 0 auto;">
+            <tr>
+                <td><a href="https://aduna.mpmg.mp.br/" target="_blank"><img src="{{ url_for('static', filename='icones/ADUNA-LINS-MPMG.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://www3.bcb.gov.br/ccs/indexEstatico.jsp" target="_blank"><img src="{{ url_for('static', filename='icones/CSS-BACEN.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://cecad.cidadania.gov.br/painel03.php" target="_blank"><img src="{{ url_for('static', filename='icones/CECAD-MINICADANIA.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://www.censec.org.br/" target="_blank"><img src="{{ url_for('static', filename='icones/CENSEC-CNB.png') }}" width="150" height="130"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://geridinss.dataprev.gov.br/cas/login?service=https://portalcnis.inss.gov.br/" target="_blank"><img src="{{ url_for('static', filename='icones/CNIS-INSS.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://cortex.mj.gov.br/" target="_blank"><img src="{{ url_for('static', filename='icones/CÓRTEX-MJ.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://crea-pa.sitac.com.br/app/view/pages/login/login.php" target="_blank"><img src="{{ url_for('static', filename='icones/CREA-PA.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://www.credilink.com.br/nova-area-do-cliente/" target="_blank"><img src="{{ url_for('static', filename='icones/CREDILINK.png') }}" width="150" height="130"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://home.registrocivil.org.br/login" target="_blank"><img src="{{ url_for('static', filename='icones/CRC-JUD-ARPENBRASIL.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://www.tcm.pa.gov.br/portal-do-jurisdicionado/sistema/e-contas-analisador" target="_blank"><img src="{{ url_for('static', filename='icones/E-CONTAS-TCM.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://galactus.mppa.mp.br/user/login" target="_blank"><img src="{{ url_for('static', filename='icones/GALACTUS-MPSE.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://geoobras.tcm.pa.gov.br/Cidadao" target="_blank"><img src="{{ url_for('static', filename='icones/GEO-OBRAS-TCM.png') }}" width="150" height="130"></a></td>
+            </tr>
+            <tr>
+                <td><a href="http://mapa.susipe.pa.gov.br/" target="_blank"><img src="{{ url_for('static', filename='icones/INFOPEN-SEAP.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://seguranca.sinesp.gov.br/sinesp-seguranca/login.jsf" target="_blank"><img src="{{ url_for('static', filename='icones/INFOSEG-MJ.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://www.tcm.pa.gov.br/aplicacoes-tcm/lince-parceiros/site/login" target="_blank"><img src="{{ url_for('static', filename='icones/LINCE-TCM.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://pandora.mppa.mp.br/login" target="_blank"><img src="{{ url_for('static', filename='icones/PANDORA.png') }}" width="150" height="130"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://regin.jucepa.pa.gov.br/regin/account/login" target="_blank"><img src="{{ url_for('static', filename='icones/REGIN-JUCEPA.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://www.tcm.pa.gov.br/REI30/mds_login_rei/" target="_blank"><img src="{{ url_for('static', filename='icones/REI-TCM.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://www.sistemas.pa.gov.br/governodigital/public/main/index.xhtml" target="_blank"><img src="{{ url_for('static', filename='icones/SISP-PAE.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://siel.tse.jus.br/session/new" target="_blank"><img src="{{ url_for('static', filename='icones/TSE-SIEL NACIONAL.png') }}" width="150" height="130"></a></td>
+            </tr>
+        </table>
+    </div>
+</section>
+{% endblock %}

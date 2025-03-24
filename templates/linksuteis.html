@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+    <div class="container">
+        <h1 style="text-align: center;">Links Úteis</h1>
+        <br>
+        <table class="center-table" style="width: 100%; margin: 0 auto;">
+            <tr>
+                <td><a href="https://mppa.mentorh.com/csp/mppa/portal/novo/index.csp" target="_blank"><img src="{{ url_for('static', filename='icones/Portal do Servidor.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://ponto.mppa.mp.br/csp/mppa/portal/novo/AcessoPonto.csp" target="_blank"><img src="{{ url_for('static', filename='icones/Ponto Servidor.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://www2.mppa.mp.br/sistemas/intranet/index.php?action=Destaque.site" target="_blank"><img src="{{ url_for('static', filename='icones/Intranet.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://correio.mppa.mp.br/" target="_blank"><img src="{{ url_for('static', filename='icones/E-mail.png') }}" width="150" height="130"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://www2.mppa.mp.br/gedoc/login.jsf" target="_blank"><img src="{{ url_for('static', filename='icones/Gedoc.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://www2.mppa.mp.br/camp" target="_blank"><img src="{{ url_for('static', filename='icones/CAMP - MPPA.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://ceaf.mppa.mp.br/app/only-email/login" target="_blank"><img src="{{ url_for('static', filename='icones/CEAF - MPPA.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://www2.mppa.mp.br/sistemas/intranet/?action=MenuOrgao.show&id=138" target="_blank"><img src="{{ url_for('static', filename='icones/SAJ Instalador.png') }}" width="150" height="130"></a></td>
+            </tr>
+            <tr>
+                <td><a href="http://192.168.154.1/cadastro/#/" target="_blank"><img src="{{ url_for('static', filename='icones/CEOS.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://portal.mppa.mp.br/sso/Login.mp" target="_blank"><img src="{{ url_for('static', filename='icones/SIMP.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://www2.mppa.mp.br/simpweb/index.jsf" target="_blank"><img src="{{ url_for('static', filename='icones/SIMP Consulta.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://pae-consulta-publica.sistemas.pa.gov.br/" target="_blank"><img src="{{ url_for('static', filename='icones/PAE Consulta.png') }}" width="150" height="130"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://www2.mppa.mp.br/data/files/D1/06/04/25/FE861810D8166608180808FF/DAJ_Relacao%20de%20contatos%20Portal%20MP%20-%20Atualizada%20-%2015-06-2022.pdf" target="_blank"><img src="{{ url_for('static', filename='icones/Endereços.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://www2.mppa.mp.br/doemppa/" target="_blank"><img src="{{ url_for('static', filename='icones/DOE - MPPA.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://pje.tjpa.jus.br/pje/login.seam" target="_blank"><img src="{{ url_for('static', filename='icones/PJe.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://web.whatsapp.com/" target="_blank"><img src="{{ url_for('static', filename='icones/WhatsApp Web.png') }}" width="150" height="130"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://onedrive.live.com/about/pt-br/signin/" target="_blank"><img src="{{ url_for('static', filename='icones/OneDrive.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://docs.google.com/spreadsheets/d/1p4ZgV6fi7Pfx8IHgxKQvIqzWXcva_Bp7APkpSh8-gv0/edit#gid=0" target="_blank"><img src="{{ url_for('static', filename='icones/Unidades Policiais.png') }}" width="150" height="130"></a></td>
+                <td><a href="https://mppabr.sharepoint.com/sites/gsintel/Documentos%20Compartilhados/Escalas%20de%20Sobreaviso/2025" target="_blank"><img src="{{ url_for('static', filename='icones/Escalas de Sobreaviso.png') }}" width="150" height="130"></a></td>
+            </tr>
+        </table>
+    </div>
+</section>
+{% endblock %}
