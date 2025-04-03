@@ -2636,3 +2636,375 @@ spawned uWSGI worker 1 (pid: 3220639, cores: 1)
 [pid: 3220639|app: 0|req: 7/7] 192.168.123.151 () {46 vars in 819 bytes} [Wed Mar 26 09:25:36 2025] GET /intranet => generated 14828 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
 [pid: 3220639|app: 0|req: 8/8] 192.168.123.151 () {46 vars in 819 bytes} [Wed Mar 26 09:25:36 2025] GET /intranet => generated 14828 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
 [pid: 3220639|app: 0|req: 9/9] 192.168.123.126 () {40 vars in 793 bytes} [Wed Mar 26 09:26:32 2025] GET /intranet => generated 14828 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+!!! uWSGI process 1106074 got Segmentation Fault !!!
+worker 1 buried after 2 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/intranet/intranet.sock removed.
+!!! uWSGI process 1106072 got Segmentation Fault !!!
+*** Starting uWSGI 2.0.28 (64bit) on [Thu Apr  3 11:17:05 2025] ***
+compiled with version: 14.2.0 on 21 February 2025 13:29:17
+os: Linux-6.11.0-19-generic #19-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb 12 21:43:43 UTC 2025
+nodename: cronos
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /var/www/intranet
+detected binary path: /var/www/intranet/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/intranet
+your processes number limit is 61559
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/intranet/intranet.sock fd 3
+Python version: 3.12.7 (main, Feb  4 2025, 14:46:03) [GCC 14.2.0]
+PEP 405 virtualenv detected: /var/www/intranet/venv
+Set PythonHome to /var/www/intranet/venv
+Python main interpreter initialized at 0x72f4cecbd230
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 268686 bytes (262 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x72f4cecbd230 pid: 1110905 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1110905)
+spawned uWSGI worker 1 (pid: 1110947, cores: 1)
+[pid: 1110947|app: 0|req: 1/1] 192.168.123.151 () {46 vars in 835 bytes} [Thu Apr  3 11:17:14 2025] GET /intranet/linksuteis => generated 10470 bytes in 71 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/intranet/intranet.sock removed.
+*** Starting uWSGI 2.0.28 (64bit) on [Thu Apr  3 11:18:23 2025] ***
+compiled with version: 14.2.0 on 21 February 2025 13:29:17
+os: Linux-6.11.0-19-generic #19-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb 12 21:43:43 UTC 2025
+nodename: cronos
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /var/www/intranet
+detected binary path: /var/www/intranet/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/intranet
+your processes number limit is 61559
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/intranet/intranet.sock fd 3
+Python version: 3.12.7 (main, Feb  4 2025, 14:46:03) [GCC 14.2.0]
+PEP 405 virtualenv detected: /var/www/intranet/venv
+Set PythonHome to /var/www/intranet/venv
+Python main interpreter initialized at 0x71c44aabd230
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 268686 bytes (262 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x71c44aabd230 pid: 1111639 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1111639)
+spawned uWSGI worker 1 (pid: 1111642, cores: 1)
+[2025-04-03 11:18:26,856] ERROR in app: Exception on /intranet/linksuteis [GET]
+Traceback (most recent call last):
+  File "/var/www/intranet/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/intranet/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/intranet/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/intranet/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/intranet/app.py", line 67, in linksuteis
+    return render_template('linksuteis.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/intranet/venv/lib/python3.12/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/intranet/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/intranet/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/intranet/venv/lib/python3.12/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/intranet/venv/lib/python3.12/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/intranet/venv/lib/python3.12/site-packages/jinja2/environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "/var/www/intranet/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/var/www/intranet/templates/linksuteis.html", line 43, in template
+    <td><a href="https://mppabr.sharepoint.com/sites/gsintel/Documentos%20Compartilhados/Escalas%20de%20Sobreaviso/2025" target="_blank"><img src="{{ url_for('static', filename='icones/Escalas de>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'static'
+[pid: 1111642|app: 0|req: 1/1] 192.168.123.151 () {46 vars in 835 bytes} [Thu Apr  3 11:18:26 2025] GET /intranet/linksuteis => generated 265 bytes in 28 msecs (HTTP/1.1 500) 2 headers in 99 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/intranet/intranet.sock removed.
+*** Starting uWSGI 2.0.28 (64bit) on [Thu Apr  3 11:21:55 2025] ***
+compiled with version: 14.2.0 on 21 February 2025 13:29:17
+os: Linux-6.11.0-19-generic #19-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb 12 21:43:43 UTC 2025
+nodename: cronos
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /var/www/intranet
+detected binary path: /var/www/intranet/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/intranet
+your processes number limit is 61559
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/intranet/intranet.sock fd 3
+Python version: 3.12.7 (main, Feb  4 2025, 14:46:03) [GCC 14.2.0]
+PEP 405 virtualenv detected: /var/www/intranet/venv
+Set PythonHome to /var/www/intranet/venv
+Python main interpreter initialized at 0x7e8d952bd230
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 268686 bytes (262 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7e8d952bd230 pid: 1113541 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1113541)
+spawned uWSGI worker 1 (pid: 1113544, cores: 1)
+[pid: 1113544|app: 0|req: 1/1] 192.168.123.151 () {42 vars in 724 bytes} [Thu Apr  3 11:22:08 2025] GET /intranet => generated 14828 bytes in 50 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+[pid: 1113544|app: 0|req: 2/2] 192.168.123.151 () {44 vars in 792 bytes} [Thu Apr  3 11:22:10 2025] GET /intranet/linksuteis => generated 10883 bytes in 29 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/intranet/intranet.sock removed.
+*** Starting uWSGI 2.0.28 (64bit) on [Thu Apr  3 11:24:38 2025] ***
+compiled with version: 14.2.0 on 21 February 2025 13:29:17
+os: Linux-6.11.0-19-generic #19-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb 12 21:43:43 UTC 2025
+nodename: cronos
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /var/www/intranet
+detected binary path: /var/www/intranet/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/intranet
+your processes number limit is 61559
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/intranet/intranet.sock fd 3
+Python version: 3.12.7 (main, Feb  4 2025, 14:46:03) [GCC 14.2.0]
+PEP 405 virtualenv detected: /var/www/intranet/venv
+Set PythonHome to /var/www/intranet/venv
+Python main interpreter initialized at 0x7a7f794bd230
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 268686 bytes (262 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7a7f794bd230 pid: 1114982 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1114982)
+spawned uWSGI worker 1 (pid: 1114984, cores: 1)
+[pid: 1114984|app: 0|req: 1/1] 192.168.123.151 () {46 vars in 823 bytes} [Thu Apr  3 11:24:40 2025] GET /intranet/linksuteis => generated 10811 bytes in 69 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/intranet/intranet.sock removed.
+*** Starting uWSGI 2.0.28 (64bit) on [Thu Apr  3 11:25:24 2025] ***
+compiled with version: 14.2.0 on 21 February 2025 13:29:17
+os: Linux-6.11.0-19-generic #19-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb 12 21:43:43 UTC 2025
+nodename: cronos
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /var/www/intranet
+detected binary path: /var/www/intranet/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/intranet
+your processes number limit is 61559
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/intranet/intranet.sock fd 3
+Python version: 3.12.7 (main, Feb  4 2025, 14:46:03) [GCC 14.2.0]
+PEP 405 virtualenv detected: /var/www/intranet/venv
+Set PythonHome to /var/www/intranet/venv
+Python main interpreter initialized at 0x7d36eb6bd230
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 268686 bytes (262 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7d36eb6bd230 pid: 1115410 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1115410)
+spawned uWSGI worker 1 (pid: 1115412, cores: 1)
+[pid: 1115412|app: 0|req: 1/1] 192.168.123.151 () {46 vars in 823 bytes} [Thu Apr  3 11:25:26 2025] GET /intranet/linksuteis => generated 10815 bytes in 69 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/intranet/intranet.sock removed.
+*** Starting uWSGI 2.0.28 (64bit) on [Thu Apr  3 11:35:55 2025] ***
+compiled with version: 14.2.0 on 21 February 2025 13:29:17
+os: Linux-6.11.0-19-generic #19-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb 12 21:43:43 UTC 2025
+nodename: cronos
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /var/www/intranet
+detected binary path: /var/www/intranet/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/intranet
+your processes number limit is 61559
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/intranet/intranet.sock fd 3
+Python version: 3.12.7 (main, Feb  4 2025, 14:46:03) [GCC 14.2.0]
+PEP 405 virtualenv detected: /var/www/intranet/venv
+Set PythonHome to /var/www/intranet/venv
+Python main interpreter initialized at 0x705760ebd230
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 268686 bytes (262 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x705760ebd230 pid: 1121055 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1121055)
+spawned uWSGI worker 1 (pid: 1121058, cores: 1)
+[pid: 1121058|app: 0|req: 1/1] 192.168.123.151 () {46 vars in 823 bytes} [Thu Apr  3 11:35:58 2025] GET /intranet/linksuteis => generated 10815 bytes in 69 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+[pid: 1121058|app: 0|req: 2/2] 192.168.123.151 () {44 vars in 793 bytes} [Thu Apr  3 11:36:32 2025] GET /intranet/apoio => generated 9812 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 1121058|app: 0|req: 3/3] 192.168.123.151 () {46 vars in 824 bytes} [Thu Apr  3 11:36:43 2025] GET /intranet/apoio => generated 9812 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 1121058|app: 0|req: 4/4] 192.168.123.151 () {44 vars in 798 bytes} [Thu Apr  3 11:36:51 2025] GET /intranet/linksuteis => generated 10815 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+[pid: 1121058|app: 0|req: 5/5] 192.168.123.151 () {44 vars in 795 bytes} [Thu Apr  3 11:36:56 2025] GET /intranet/fontes => generated 9127 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 1121058|app: 0|req: 6/6] 192.168.123.151 () {44 vars in 799 bytes} [Thu Apr  3 11:37:00 2025] GET /intranet/linksuteis => generated 10815 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+[pid: 1121058|app: 0|req: 7/7] 192.168.123.151 () {44 vars in 793 bytes} [Thu Apr  3 11:38:01 2025] GET /intranet/apoio => generated 9812 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/intranet/intranet.sock removed.
+*** Starting uWSGI 2.0.28 (64bit) on [Thu Apr  3 11:42:13 2025] ***
+compiled with version: 14.2.0 on 21 February 2025 13:29:17
+os: Linux-6.11.0-19-generic #19-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb 12 21:43:43 UTC 2025
+nodename: cronos
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /var/www/intranet
+detected binary path: /var/www/intranet/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/intranet
+your processes number limit is 61559
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/intranet/intranet.sock fd 3
+Python version: 3.12.7 (main, Feb  4 2025, 14:46:03) [GCC 14.2.0]
+PEP 405 virtualenv detected: /var/www/intranet/venv
+Set PythonHome to /var/www/intranet/venv
+Python main interpreter initialized at 0x7a48d8ebd230
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 268686 bytes (262 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7a48d8ebd230 pid: 1124488 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1124488)
+spawned uWSGI worker 1 (pid: 1124491, cores: 1)
+[pid: 1124491|app: 0|req: 1/1] 192.168.123.151 () {46 vars in 824 bytes} [Thu Apr  3 11:42:15 2025] GET /intranet/apoio => generated 10152 bytes in 48 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+[pid: 1124491|app: 0|req: 2/2] 192.168.123.151 () {44 vars in 804 bytes} [Thu Apr  3 11:42:53 2025] GET /intranet/simba/manuais => generated 7665 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 1124491|app: 0|req: 3/3] 192.168.123.151 () {44 vars in 812 bytes} [Thu Apr  3 11:50:07 2025] GET /intranet/simba/manuais => generated 7665 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 1124491|app: 0|req: 4/4] 192.168.123.151 () {44 vars in 808 bytes} [Thu Apr  3 11:50:08 2025] GET /intranet/rif/manuais => generated 8022 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 1124491|app: 0|req: 5/5] 192.168.123.151 () {44 vars in 794 bytes} [Thu Apr  3 11:50:10 2025] GET /intranet/apoio => generated 10152 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/intranet/intranet.sock removed.
+*** Starting uWSGI 2.0.28 (64bit) on [Thu Apr  3 11:50:30 2025] ***
+compiled with version: 14.2.0 on 21 February 2025 13:29:17
+os: Linux-6.11.0-19-generic #19-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb 12 21:43:43 UTC 2025
+nodename: cronos
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /var/www/intranet
+detected binary path: /var/www/intranet/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/intranet
+your processes number limit is 61559
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/intranet/intranet.sock fd 3
+Python version: 3.12.7 (main, Feb  4 2025, 14:46:03) [GCC 14.2.0]
+PEP 405 virtualenv detected: /var/www/intranet/venv
+Set PythonHome to /var/www/intranet/venv
+Python main interpreter initialized at 0x725262ebd230
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 268686 bytes (262 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x725262ebd230 pid: 1128997 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1128997)
+spawned uWSGI worker 1 (pid: 1128999, cores: 1)
+[pid: 1128999|app: 0|req: 1/1] 192.168.123.151 () {46 vars in 825 bytes} [Thu Apr  3 11:50:39 2025] GET /intranet/apoio => generated 10152 bytes in 48 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+[pid: 1128999|app: 0|req: 2/2] 192.168.123.151 () {44 vars in 804 bytes} [Thu Apr  3 11:50:41 2025] GET /intranet/simba/manuais => generated 7984 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/intranet/intranet.sock removed.
+*** Starting uWSGI 2.0.28 (64bit) on [Thu Apr  3 11:51:04 2025] ***
+compiled with version: 14.2.0 on 21 February 2025 13:29:17
+os: Linux-6.11.0-19-generic #19-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb 12 21:43:43 UTC 2025
+nodename: cronos
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /var/www/intranet
+detected binary path: /var/www/intranet/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/intranet
+your processes number limit is 61559
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/intranet/intranet.sock fd 3
+Python version: 3.12.7 (main, Feb  4 2025, 14:46:03) [GCC 14.2.0]
+PEP 405 virtualenv detected: /var/www/intranet/venv
+Set PythonHome to /var/www/intranet/venv
+Python main interpreter initialized at 0x7c388a6bd230
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 268686 bytes (262 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7c388a6bd230 pid: 1129309 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1129309)
+spawned uWSGI worker 1 (pid: 1129312, cores: 1)
+[pid: 1129312|app: 0|req: 1/1] 192.168.123.151 () {46 vars in 835 bytes} [Thu Apr  3 11:51:08 2025] GET /intranet/simba/manuais => generated 7984 bytes in 47 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 1129312|app: 0|req: 2/2] 192.168.123.151 () {44 vars in 796 bytes} [Thu Apr  3 11:51:20 2025] GET /intranet/apoio => generated 10152 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+[pid: 1129312|app: 0|req: 3/3] 192.168.123.151 () {44 vars in 794 bytes} [Thu Apr  3 11:51:24 2025] GET /intranet/restrito => generated 10277 bytes in 26 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+[pid: 1129312|app: 0|req: 4/4] 192.168.123.151 () {44 vars in 801 bytes} [Thu Apr  3 11:51:25 2025] GET /intranet/linksuteis => generated 10815 bytes in 28 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
