@@ -165,7 +165,7 @@ nav ul li .dropdown-content.show {
     position: fixed; /* Posiciona o banner de forma fixa */
     top: 0; /* Alinha o topo do banner com o topo da página */
     width: 2000px; /* Garante que o banner ocupe toda a largura */
-    height: 106px;
+    height: 150px;
     z-index: 1010; /* Coloca o banner acima do menu */
     object-fit: cover;
     left: 50%; /* Centraliza o banner horizontalmente */
